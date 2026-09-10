@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540" width="100%" height="100%" role="img" aria-label="Portal registered courses table with drop buttons">
+  <defs>
+    <filter id="portal-shadow" x="-3%" y="-3%" width="106%" height="108%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <rect width="880" height="540" fill="#FAFAFA" rx="12" />
+
+  <!-- Section Header -->
+  <g transform="translate(24, 38)">
+    <!-- 4-square grid icon in crimson red -->
+    <rect x="0" y="-18" width="8" height="8" rx="1.5" fill="#a30818" />
+    <rect x="11" y="-18" width="8" height="8" rx="1.5" fill="#a30818" />
+    <rect x="0" y="-7" width="8" height="8" rx="1.5" fill="#a30818" />
+    <rect x="11" y="-7" width="8" height="8" rx="1.5" fill="#a30818" />
+
+    <text x="28" y="-4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827">Registered Courses:</text>
+    <line x1="28" y1="2" x2="225" y2="2" stroke="#111827" stroke-width="1.8" />
+  </g>
+
+  <!-- Table Container -->
+  <g transform="translate(24, 66)" filter="url(#portal-shadow)">
+    <!-- Outer Table Border -->
+    <rect x="0" y="0" width="832" height="440" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.2" rx="4" />
+
+    <!-- Table Header Row (Crimson Red #a30818) -->
+    <rect x="0" y="0" width="832" height="48" fill="#a30818" rx="4" />
+    <!-- Flatten bottom corners of header -->
+    <rect x="0" y="40" width="832" height="8" fill="#a30818" />
+
+    <!-- Header Column Dividers -->
+    <line x1="176" y1="0" x2="176" y2="440" stroke="#D1D5DB" stroke-width="1" />
+    <line x1="306" y1="0" x2="306" y2="440" stroke="#D1D5DB" stroke-width="1" />
+    <line x1="436" y1="0" x2="436" y2="440" stroke="#D1D5DB" stroke-width="1" />
+    <line x1="566" y1="0" x2="566" y2="440" stroke="#D1D5DB" stroke-width="1" />
+    <line x1="696" y1="0" x2="696" y2="440" stroke="#D1D5DB" stroke-width="1" />
+    <line x1="752" y1="0" x2="752" y2="440" stroke="#D1D5DB" stroke-width="1" />
+
+    <!-- Header Labels -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">
+      <text x="16" y="30">Courses</text>
+      <text x="188" y="30">Sunday</text>
+      <text x="318" y="30">Tuesday</text>
+      <text x="448" y="30">Wednesday</text>
+      <text x="578" y="30">Thursday</text>
+      <text x="706" y="30">Cr.H.</text>
+    </g>
+
+    <!-- Horizontal Row Dividers -->
+    <line x1="0" y1="244" x2="832" y2="244" stroke="#D1D5DB" stroke-width="1" />
+
+    <!-- ROW 1: Financial Management -->
+    <!-- Course Name -->
+    <text x="16" y="146" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="500" fill="#111827">Financial Management</text>
+
+    <!-- Sunday Cell -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#111827">
+      <text x="186" y="98" font-weight="400">FIN201-New07</text>
+      <text x="186" y="118">(Lecture)</text>
+      <text x="186" y="142" fill="#374151">Sunday - 8:30</text>
+      <text x="186" y="162" fill="#374151">AM - 10:30 AM</text>
+      <text x="186" y="186" font-weight="500">232</text>
+    </g>
+
+    <!-- Tuesday Cell -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#111827">
+      <text x="316" y="98" font-weight="400">FIN201-New07</text>
+      <text x="316" y="118">(Section)</text>
+      <text x="316" y="142" fill="#374151">Tuesday - 8:30</text>
+      <text x="316" y="162" fill="#374151">AM - 10:00 AM</text>
+      <text x="316" y="186" font-weight="500">234</text>
+    </g>
+
+    <!-- Wednesday Cell (empty) -->
+
+    <!-- Thursday Cell -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#111827">
+      <text x="576" y="98" font-weight="400">FIN201-New07</text>
+      <text x="576" y="118">(Lecture)</text>
+      <text x="576" y="142" fill="#374151">Thursday - 8:30</text>
+      <text x="576" y="162" fill="#374151">AM - 10:00 AM</text>
+      <text x="576" y="186" font-weight="500">232</text>
+    </g>
+
+    <!-- Cr.H. Cell -->
+    <text x="720" y="146" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="500" fill="#111827">4</text>
+
+    <!-- DROP Button 1 -->
+    <g transform="translate(762, 126)">
+      <rect x="0" y="0" width="60" height="38" rx="4" fill="#a30818" />
+      <text x="30" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">DROP</text>
+    </g>
+
+
+    <!-- ROW 2: Principles of Nutrition -->
+    <!-- Course Name -->
+    <text x="16" y="342" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="500" fill="#111827">Principles of Nutrition</text>
+
+    <!-- Wednesday Cell -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#111827">
+      <text x="446" y="310" font-weight="400">NUT10102-MCM</text>
+      <text x="446" y="330">(Lecture)</text>
+      <text x="446" y="352" fill="#374151">Wednesday -</text>
+      <text x="446" y="372" fill="#374151">11:30 AM - 1:00 PM</text>
+      <text x="446" y="394" font-weight="500">229</text>
+    </g>
+
+    <!-- Cr.H. Cell -->
+    <text x="720" y="342" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="500" fill="#111827">3</text>
+
+    <!-- DROP Button 2 -->
+    <g transform="translate(762, 322)">
+      <rect x="0" y="0" width="60" height="38" rx="4" fill="#a30818" />
+      <text x="30" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">DROP</text>
+    </g>
+  </g>
+</svg>

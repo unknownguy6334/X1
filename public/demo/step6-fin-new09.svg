@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 500" width="100%" height="100%" role="img" aria-label="Financial Management option New09 schedule screenshot">
+  <defs>
+    <filter id="card-shadow-6b" x="-3%" y="-3%" width="106%" height="108%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Main Card -->
+  <g filter="url(#card-shadow-6b)">
+    <rect x="16" y="14" width="708" height="406" rx="10" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.2" />
+
+    <!-- Course Title -->
+    <text x="36" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="#8b1523">Financial Management</text>
+
+    <!-- Collapsed Option: FIN201 - New07 -->
+    <g transform="translate(36, 82)">
+      <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="500" fill="#1F2937">FIN201 - New07</text>
+      <!-- Chevron Down -->
+      <path d="M 648,-8 L 656,0 L 664,-8" fill="none" stroke="#4B5563" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <!-- Divider Line -->
+    <line x1="36" y1="102" x2="704" y2="102" stroke="#E5E7EB" stroke-width="1" />
+
+    <!-- Expanded Option: FIN201 - New09 -->
+    <g transform="translate(36, 134)">
+      <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="500" fill="#1F2937">FIN201 - New09</text>
+      <!-- Chevron Up -->
+      <path d="M 648,-2 L 656,-10 L 664,-2" fill="none" stroke="#4B5563" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <!-- Schedule Table -->
+    <g transform="translate(36, 154)">
+      <rect x="0" y="0" width="668" height="196" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.2" rx="4" />
+
+      <!-- Table Header (Crimson) -->
+      <rect x="0" y="0" width="668" height="42" fill="#a30818" rx="4" />
+      <rect x="0" y="34" width="668" height="8" fill="#a30818" />
+
+      <!-- Column Dividers -->
+      <line x1="104" y1="0" x2="104" y2="196" stroke="#D1D5DB" stroke-width="1" />
+      <line x1="292" y1="0" x2="292" y2="196" stroke="#D1D5DB" stroke-width="1" />
+      <line x1="480" y1="0" x2="480" y2="196" stroke="#D1D5DB" stroke-width="1" />
+
+      <!-- Row Dividers -->
+      <line x1="0" y1="94" x2="668" y2="94" stroke="#D1D5DB" stroke-width="1" />
+      <line x1="0" y1="146" x2="668" y2="146" stroke="#D1D5DB" stroke-width="1" />
+
+      <!-- Header Labels -->
+      <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">
+        <text x="12" y="26">Days</text>
+        <text x="114" y="26">10:30 AM - 12:00 PM</text>
+        <text x="302" y="26">10:00 AM - 11:30 AM</text>
+        <text x="490" y="26">1:00 PM - 3:00 PM</text>
+      </g>
+
+      <!-- Row 1: Sunday -->
+      <text x="12" y="72" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#111827">Sunday</text>
+      <text x="114" y="72" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#111827">FIN201 - New09 (Lecture)</text>
+
+      <!-- Row 2: Tuesday -->
+      <text x="12" y="124" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#111827">Tuesday</text>
+      <text x="302" y="124" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#111827">FIN201 - New09 (Lecture)</text>
+
+      <!-- Row 3: Wednesday -->
+      <text x="12" y="176" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#111827">Wednesday</text>
+      <text x="490" y="176" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#111827">FIN201 - New0901 (Section)</text>
+    </g>
+
+    <!-- ADD Button -->
+    <g transform="translate(620, 362)">
+      <rect x="0" y="0" width="84" height="36" rx="4" fill="#a30818" />
+      <text x="42" y="23" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">ADD</text>
+    </g>
+  </g>
+
+  <!-- BACK Button centered underneath card -->
+  <g transform="translate(326, 442)">
+    <rect x="0" y="0" width="88" height="36" rx="4" fill="#a30818" />
+    <text x="44" y="23" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">BACK</text>
+  </g>
+</svg>

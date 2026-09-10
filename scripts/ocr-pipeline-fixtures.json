@@ -1,0 +1,21 @@
+{
+  "corpusSizes": [1, 19, 30],
+  "identityCases": [
+    ["BIM32108-BUS", "BIM3210801-BUS"],
+    ["FIN434-New01", "FIN434-New03"],
+    ["FIN434 - New01", "FIN434-New01"]
+  ],
+  "edgeCases": [
+    "exact duplicate",
+    "near duplicate",
+    "one-option course",
+    "missing section code",
+    "conflicting meeting evidence",
+    "incomplete meeting evidence",
+    "malformed JSON",
+    "semantically invalid JSON",
+    "aggregate payload over server limit",
+    "stale response after remove/clear/cancel",
+    "refresh during pending review"
+  ]
+}

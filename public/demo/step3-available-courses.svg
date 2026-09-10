@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 380" width="100%" height="100%" role="img" aria-label="Available Courses table with select button">
+  <defs>
+    <filter id="card-shadow" x="-3%" y="-3%" width="106%" height="108%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Outer Card Frame with Red Accent Border -->
+  <rect x="12" y="12" width="716" height="356" rx="8" fill="#FFFFFF" stroke="#a30818" stroke-width="1.6" filter="url(#card-shadow)" />
+
+  <!-- Available Categories Header -->
+  <g transform="translate(32, 42)">
+    <!-- Red double bar icon -->
+    <rect x="0" y="-16" width="6" height="18" rx="2" fill="#a30818" />
+    <rect x="10" y="-16" width="6" height="18" rx="2" fill="#a30818" />
+
+    <text x="26" y="-1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700" fill="#111827">Available Categories:</text>
+    <line x1="26" y1="5" x2="238" y2="5" stroke="#111827" stroke-width="1.8" />
+
+    <!-- Chevron Up -->
+    <path d="M 646,-4 L 654,-12 L 662,-4" fill="none" stroke="#4B5563" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Category Name -->
+  <text x="32" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600" fill="#1F2937">20F-UNV Elective</text>
+
+  <!-- Table Container -->
+  <g transform="translate(32, 114)">
+    <rect x="0" y="0" width="676" height="110" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.2" rx="4" />
+
+    <!-- Table Header Row -->
+    <rect x="0" y="0" width="676" height="46" fill="#a30818" rx="4" />
+    <rect x="0" y="38" width="676" height="8" fill="#a30818" />
+
+    <!-- Column Dividers -->
+    <line x1="170" y1="0" x2="170" y2="110" stroke="#D1D5DB" stroke-width="1" />
+    <line x1="456" y1="0" x2="456" y2="110" stroke="#D1D5DB" stroke-width="1" />
+    <line x1="560" y1="0" x2="560" y2="110" stroke="#D1D5DB" stroke-width="1" />
+
+    <!-- Header Text -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">
+      <text x="16" y="28">Course Code</text>
+      <text x="186" y="28">Course Name</text>
+      <text x="468" y="28">Credit H.</text>
+    </g>
+
+    <!-- Table Row 1 -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#111827">
+      <text x="16" y="82" font-weight="500">ENR101</text>
+      <text x="186" y="82" font-weight="500">Principles of Nutrition</text>
+      <text x="480" y="82" font-weight="500">3</text>
+    </g>
+
+    <!-- SELECT Button -->
+    <g transform="translate(574, 60)">
+      <rect x="0" y="0" width="94" height="36" rx="4" fill="#a30818" />
+      <text x="47" y="23" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">SELECT</text>
+    </g>
+  </g>
+</svg>

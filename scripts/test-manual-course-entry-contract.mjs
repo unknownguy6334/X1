@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const add = fs.readFileSync(path.join(root,'src/components/StepAddCourses.tsx'),'utf8');
+const model = fs.readFileSync(path.join(root,'src/features/courseBuilder/model.ts'),'utf8');
+const types = fs.readFileSync(path.join(root,'src/utils/meetingTypes.ts'),'utf8');
+const app = fs.readFileSync(path.join(root,'src/App.tsx'),'utf8');
+const failures=[]; let n=0;
+const ok=(v,m)=>{n++; if(!v) failures.push(m)};
+const manual = types.match(/MANUAL_MEETING_TYPE_OPTIONS = \[(.*?)\]/s)?.[1] ?? '';
+const manualTypes=[...manual.matchAll(/'([^']+)'/g)].map(m=>m[1]);
+ok(manualTypes.join('|')==='Lecture|Section|Lab|Online|Custom','manual types are exactly the five contract values');
+ok(model.includes('courseCode: string;') && model.includes("courseCode: '',"),'manual form stores separate courseCode');
+ok(add.includes('Course code *') && add.includes('form.courseCode') && add.includes('Section code *') && add.includes('form.sectionCode'),'manual UI exposes separate required course/section codes');
+ok(add.includes('parseCreditHours(rawCredits) === null') && add.includes('hasMeetingOverlap(f.sessions)'),'save-button validation includes numeric credits and overlap validation');
+ok(add.includes('hasIncompleteManualDraft') && add.includes('hasManualIdentityCollision'),'save-button blocks incomplete and duplicate drafts');
+ok(add.includes('if (handleSaveManualSections()) setWorkflowPanel(\'preferences\')'),'save navigation occurs only after successful save');
+ok(add.includes("canonicalizeSectionIdentity(sectionCode)") && add.includes("canonicalizeSectionIdentity(String(section.sectionCode || '')"),'manual duplicate check uses canonical visible sectionCode');
+ok(add.includes('onClick={() => handleStartEditSection(section, group.courseName)}'),'every saved section has its own edit action');
+ok(add.includes('onDeleteSection(section.id, group.courseName)'),'every saved section has its own delete action');
+ok(add.includes('courseCode: sec.courseCode || \'\'') && add.includes('courseCode: cleanCourseCode'),'edit preserves/updates courseCode');
+ok(add.includes('...(originalSection || {})') && add.includes('instructor: editingSection.instructor?.trim() || originalSection?.instructor || null'),'edit preserves original section metadata/instructor');
+ok(add.includes('type="time"') && add.includes('Editing session ${idx + 1} start time'),'edit uses native time inputs');
+ok(model.includes("credits: '',"),'new manual forms do not silently default credits to 3');
+ok(add.includes('Meeting code')===false && add.includes('session.type || \'Meeting\''),'saved review includes meeting type');
+ok(app.includes("canonicalizeSectionIdentity(String(s.sectionCode || '')") && app.includes('canonicalTarget'),'App section deletion accepts canonical visible section code as target');
+if(failures.length){console.error(`MANUAL CONTRACT: ${n-failures.length}/${n} passed`); for(const f of failures) console.error('FAIL:',f); process.exit(1)}
+console.log(`MANUAL CONTRACT: ${n}/${n} passed`);

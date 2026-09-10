@@ -1,0 +1,36 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const read = f => fs.readFileSync(path.join(root,f),'utf8');
+const files = {
+ add: read('src/components/StepAddCourses.tsx'), preferenceUi: read('src/components/SchedulePreferencesPanel.tsx'), credit: read('src/components/CreditHourSelector.tsx'), results: read('src/components/StepResults.tsx'), demo: read('src/components/DemoModal.tsx'), app: read('src/App.tsx'), modal: read('src/hooks/useModalAccessibility.ts'), exportMenu: read('src/components/ScheduleExportMenu.tsx'), index: read('index.html')
+};
+let n=0, fail=[];
+const ok=(v,m)=>{n++; if(!v) fail.push(m)};
+ok(files.add.includes('required aria-required="true"'), 'manual required fields expose required semantics');
+ok(files.add.includes('aria-describedby={!form.courseCode.trim() && form.name.trim() ? `manual-field-${form.id}-courseCode-error`'), 'course code field has error relation');
+ok(files.add.includes('aria-describedby={!form.sectionCode.trim() && form.name.trim() ? `manual-field-${form.id}-sectionCode-error`'), 'section code field has error relation');
+ok(files.add.includes('htmlFor="edit-section-course-code"') && files.add.includes('htmlFor="edit-section-code"'), 'edit labels are programmatically connected');
+ok(files.credit.includes('htmlFor={`${idPrefix}-custom-input`}') && files.credit.includes('aria-labelledby={`${idPrefix}-label`}'), 'credit selector has contextual label relation');
+ok(files.credit.includes('inputMode="decimal"') && files.credit.includes('step="0.5"'), 'credit selector uses decimal input configuration');
+ok(files.add.includes('aria-label={`${section.name || \'Course\'} meeting ${sessIdx + 1} day`}') && files.add.includes('aria-label={`${section.name || \'Course\'} meeting ${sessIdx + 1} start time`}'), 'OCR review meeting controls have explicit accessible names');
+ok(files.add.includes('DAY_LABELS[d]'), 'edit/review day selectors use readable day labels');
+ok(files.add.includes('aria-label={`Remove meeting ${sessIdx + 1}`}'), 'OCR remove meeting control has explicit accessible name');
+ok(files.preferenceUi.includes('aria-invalid={!targetCreditsValidation.isValid}') && files.preferenceUi.includes('aria-invalid={!targetCourseCountValidation.isValid}'), 'target inputs expose invalid state');
+ok(files.preferenceUi.includes('aria-invalid={!creditRangeValidation.isValid}') && files.preferenceUi.includes('aria-invalid={!timeWindowValidation.isValid}'), 'preference range/time controls expose invalid state');
+ok(files.add.includes('aria-controls={`manual-form-editor-${form.id}`}'), 'manual accordion exposes controlled region');
+ok(files.add.includes('data-manual-editor-heading') && files.add.includes('matchMedia(\'(max-width: 767px)\')'), 'mobile manual editor has predictable focus without auto-keyboard opening');
+ok(files.results.includes('role="region" aria-labelledby={`${detailId}-title`}'), 'full details is an explicitly named region');
+ok(files.results.includes('Accessible schedule summary for Schedule'), 'timetable has a linear accessible representation');
+ok(files.results.includes('Zero gap') || files.results.includes('Total gaps:'), 'gap quality is not color-only');
+ok(files.app.includes('aria-busy={isCalculating}') && files.app.includes('aria-label="GADWAL schedule planner"'), 'main landmark is named and reports busy state');
+ok(files.app.includes('optimizerErrorRef') && files.app.includes('optimizerErrorMessage'), 'blocking optimizer errors move focus predictably');
+ok(files.demo.includes('aria-describedby="demo-steps-keyboard-help"') && files.demo.includes('Use Left and Right Arrow keys'), 'demo tab keyboard behavior is discoverable');
+ok(files.demo.includes('first step.') && files.demo.includes('last step.'), 'demo boundary states are announced');
+ok(files.add.includes('aria-describedby="screenshot-upload-help"'), 'visible file picker trigger describes accepted formats');
+ok(files.modal.includes('const overlayRoot = document.getElementById(\'gadwal-overlay-root\')') && files.modal.includes('document.body.children'), 'modal background isolation is scoped to top-level regions');
+ok(files.exportMenu.includes('focusMenuItem(0)') && files.exportMenu.includes('ArrowDown') && files.exportMenu.includes('Home'), 'export menu has deterministic initial focus and keyboard navigation');
+ok(files.index.includes('id="gadwal-overlay-root" aria-live="off" aria-label="GADWAL dialogs and popups"'), 'overlay root is explicitly named');
+console.log(`ACCESSIBILITY AUDIT CONTRACT: ${n-fail.length}/${n} passed`);
+for (const f of fail) console.error('FAIL:', f);
+if (fail.length) process.exit(1);

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400" width="100%" height="100%" role="img" aria-label="Advising portal icon">
+  <!-- Lavender/purple rounded card matching exact shade -->
+  <rect x="25" y="16" width="310" height="310" rx="46" fill="#9289DC" />
+
+  <!-- Laptop outline icon -->
+  <!-- 1. Outer lid frame -->
+  <path
+    d="M 84,232 L 84,106 A 18,18 0 0 1 102,88 L 258,88 A 18,18 0 0 1 276,106 L 276,232"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- 2. Screen / browser window inside lid -->
+  <rect
+    x="98"
+    y="102"
+    width="164"
+    height="118"
+    rx="12"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="5.5"
+    stroke-linejoin="round"
+  />
+
+  <!-- 3. Top window header bar line -->
+  <line
+    x1="98"
+    y1="124"
+    x2="262"
+    y2="124"
+    stroke="#FFFFFF"
+    stroke-width="4.5"
+    stroke-linecap="round"
+  />
+
+  <!-- 4. Three window control dots -->
+  <circle cx="112" cy="113" r="3.2" fill="#FFFFFF" />
+  <circle cx="122" cy="113" r="3.2" fill="#FFFFFF" />
+  <circle cx="132" cy="113" r="3.2" fill="#FFFFFF" />
+
+  <!-- 5. Three content columns (Card 1, Card 2, Card 3) -->
+  <!-- Card 1 (Left) -->
+  <rect x="108" y="136" width="40" height="32" rx="3.5" fill="none" stroke="#FFFFFF" stroke-width="4" />
+  <rect x="113" y="141" width="30" height="22" rx="2" fill="#FFFFFF" />
+  <line x1="108" y1="176" x2="148" y2="176" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+  <line x1="108" y1="184" x2="140" y2="184" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Card 2 (Center) -->
+  <rect x="160" y="136" width="40" height="32" rx="3.5" fill="none" stroke="#FFFFFF" stroke-width="4" />
+  <rect x="165" y="141" width="30" height="22" rx="2" fill="#FFFFFF" />
+  <line x1="160" y1="176" x2="200" y2="176" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+  <line x1="160" y1="184" x2="192" y2="184" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Card 3 (Right) -->
+  <rect x="212" y="136" width="40" height="32" rx="3.5" fill="none" stroke="#FFFFFF" stroke-width="4" />
+  <rect x="217" y="141" width="30" height="22" rx="2" fill="#FFFFFF" />
+  <line x1="212" y1="176" x2="252" y2="176" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+  <line x1="212" y1="184" x2="244" y2="184" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+
+  <!-- 6. Mouse pointer arrow (under center card, pointing up-left) -->
+  <path
+    d="M 174,192 L 189,207 L 183,209 L 191,221 L 185,225 L 177,213 L 172,217 Z"
+    fill="#9289DC"
+    stroke="#FFFFFF"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- 7. Laptop bottom base / keyboard platform -->
+  <path
+    d="M 64,232 L 296,232 C 302,232 306,236 304,242 L 301,249 C 299,254 294,257 288,257 L 72,257 C 66,257 61,254 59,249 L 56,242 C 54,236 58,232 64,232 Z"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- Center notch cutout on base -->
+  <line x1="162" y1="237" x2="198" y2="237" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" />
+
+  <!-- Advising caption in serif font matching the portal screenshot exactly -->
+  <text
+    x="180"
+    y="368"
+    text-anchor="middle"
+    font-family="'Times New Roman', Times, Georgia, 'DejaVu Serif', serif"
+    font-size="28"
+    font-weight="500"
+    fill="#22272E"
+    letter-spacing="0.2px"
+  >Advising</text>
+</svg>
